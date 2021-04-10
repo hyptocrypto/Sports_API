@@ -4,8 +4,13 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import traceback
-from config import db, MLB
 import re
+
+## Dirty hack for imports.
+import sys
+import os
+sys.path.append(os.path.abspath('../app'))
+from config import db, MLB
 
 
 driver_path = '/usr/local/bin/chromedriver'

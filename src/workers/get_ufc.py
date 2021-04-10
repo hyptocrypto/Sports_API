@@ -4,8 +4,14 @@ import re
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from config import db, UFC
 import traceback
+
+## Dirty hack for imports.
+import sys
+import os
+sys.path.append(os.path.abspath('../app'))
+from config import db, UFC
+
 
 driver_path = '/usr/local/bin/chromedriver'
 chrome_options = Options()
@@ -20,6 +26,7 @@ seasons = ["2020", "2021"]
 
 
 def get_ufc():
+    return
     for season in seasons:
         driver.get(
             f"https://www.espn.com/mma/schedule/_/year/{season}/league/ufc")

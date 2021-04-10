@@ -4,8 +4,13 @@ import time
 import re
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from config import db, NFL
 import traceback
+
+## Dirty hack for imports.
+import sys
+import os
+sys.path.append(os.path.abspath('../app'))
+from config import db, NFL
 
 # driver_path = '/usr/bin/chromedriver'
 # chrome_options = Options()
